@@ -1,0 +1,68 @@
+email_temp = $$last
+
+message = '''
+
+<div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 10px; border-radius: 10px;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+        <!-- Header Section -->
+        <div style="background-color: #007bff; color: #ffffff; padding: 20px; display: flex; justify-content: space-between;">
+            <img src="https://s3.amazonaws.com/ivot/ivot/6277.jpeg" style="width: 120px; height: auto; padding: 10px; border-radius: 40px;">
+            <h1 style="font-size: 16px; padding: 10px;">IVoT Academy Daily Report</h1>
+        </div>
+
+        <!-- Content Section -->
+        <div style="padding: 20px;">
+            <!--<h3 style="font-size: 22px; color: #333; margin-bottom: 20px;">Hello Teams,</h3>-->
+            <table style="width: 100%;">
+                <!-- Table Rows -->
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Registered Users</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$totalRegUsers</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Registered Users by Pilot_A</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$Pilot_A</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total English Users by Pilot_A</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$PilotAEnglish</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Spanish Users by Pilot_A</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$PilotASpanish</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Registered Users by Pilot_C</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$Pilot_C</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total English Users by Pilot_C</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$PilotCEnglish</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Spanish Users by Pilot_C</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$PilotCSpanish</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Active Users</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$activeStudentsCount</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Users Registered in Last 24hrs</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$one_day_ago_count</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; font-size: 16px; color: #555; border-bottom: 1px solid #ddd; ">Total Users Completed Entry Test</td>
+                    <td style="padding: 12px; text-align: right; font-size: 16px; color: #333; border-bottom: 1px solid #ddd; "><strong>$$entryCompletedStudents</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 16px; color: #555;">Total Users Completed Basic Training (Course 1)</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right; font-size: 16px; color: #333;"><strong>$$basicCompletedStudents</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+'''
+%%message%%=message

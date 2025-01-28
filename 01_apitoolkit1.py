@@ -1,6 +1,58 @@
+ownership_value = float($$request["ownership_value"])
+shares_value = int($$result[4]["field_value"])
+price_value = int($$result[12]["field_value"])
+
+market_value = shares_value * price_value
+
+ownership_decimal = ownership_value / 100
+
+shares_owned = ownership_decimal * shares_value 
+
+total_amount_value = shares_owned * price_value
+
+final_output = dict()
+final_output["market_value"]=market_value
+final_output["shares_owned"]=shares_owned
+final_output["total_amount_value"]=total_amount_value
+
+final_output["shares_value"] = $$result[4]["field_value"]
+final_output["price_value"] = $$result[12]["field_value"]
+
+%%calculated%% = final_output 
+
+[
+  {
+    "$match": {
+      "toolkit": "Toolkit1"
+    }
+  },
+  {
+    "$project": {
+       "field_name" : 1,
+       "field_value" : 1,
+       "_id": 0
+    }
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #  >>>>>>>>>Original Toolkit 1 Code>>>>>>>>>>>>>
 
-ownership_value = int($$request["ownership_value"])
+ownership_value = float($$request["ownership_value"])
 shares_value = int($$request["shares_value"])
 price_value = int($$request["price_value"])
 
