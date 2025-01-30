@@ -1,5 +1,4 @@
 #>>>>>>>>>>>>>Actual Code of Progress Monitoring in Dynamic Logic>>>>
-
 quizzes=$$quiz_response
 trainings=$$program_response
 
